@@ -16,8 +16,8 @@ const Invoice = () => {
         return acc
     },0)
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+    <div className="min-h-screen bg-gray-100 md:p-6 p-3">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md md:p-6 p-2 mr-2">
         <h1 className="text-2xl font-bold mb-4 text-gray-800">Invoice</h1>
 
         {/* Invoice Details */}

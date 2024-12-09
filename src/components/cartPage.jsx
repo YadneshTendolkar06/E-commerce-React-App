@@ -34,7 +34,7 @@ function CartPage() {
                 { cartState.length !== 0 ? cartState.map((item, index) => (
                 <div
                     key={item.id}
-                    className="flex items-center bg-white shadow-md rounded-lg p-4 mb-4"
+                    className="flex md:flex-row flex-col items-center bg-white shadow-md rounded-lg p-4 mb-4 mx-5"
                 >
                     <img
                     src={item.thumbnail}
@@ -43,7 +43,7 @@ function CartPage() {
                     />
                     <div className="ml-4 flex-1">
                     <h2 className="text-lg font-semibold">{item.title}</h2>
-                    <p className="text-gray-600">${item.price * item.count}</p>
+                    <p className="text-gray-600 md:mx-0 mx-24">${item.price * item.count}</p>
                     </div>
 
                     <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ function CartPage() {
                     </button>
                     </div>
 
-                    <button onClick={()=> handleRemoveCart(item.title)} className="ml-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                    <button onClick={()=> handleRemoveCart(item.title)} className="ml-0 md:ml-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 md:mt-0 mt-5">
                     Remove
                     </button>
                 </div>

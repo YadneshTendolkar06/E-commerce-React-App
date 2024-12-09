@@ -11,11 +11,11 @@ function Pagination({total,page,setPage}) {
     }
 
     return (
-        <div className='flex justify-center'>
+        <div className='flex justify-center '>
             <span onClick={()=> handlePagination(page - 1)} className='text-4xl cursor-pointer'>◀️</span>
             {
                 Array.from({length: totalPages}, (_,index)=>
-                    <span onClick={()=> handlePagination(index + 1)} key={index} className={page == index + 1 ? 'paginating border-2 border-black p-3 cursor-pointer' : 'border-2 border-black p-3 cursor-pointer '}>{index + 1}</span>
+                    <span onClick={()=> handlePagination(index + 1)} key={index} className={page == index + 1 ? 'paginating border-2 border-black p-1 md:p-3 cursor-pointer' : 'border-2 border-black md:p-3 p-1 cursor-pointer '}>{index + 1}</span>
                 )
             }
             <span onClick={()=> handlePagination(page + 1)} className='text-4xl cursor-pointer'>▶️</span>

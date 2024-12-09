@@ -22,6 +22,8 @@ function App() {
     .finally(()=> setLoading(false))
   },[])
 
+  // console.log("Client headers:", this.client.headers);
+
   return loading ? <h3>Loading</h3> :
   <div>
     <div className="bg-white shadow-md py-4">
