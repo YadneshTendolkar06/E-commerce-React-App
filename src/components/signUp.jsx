@@ -96,37 +96,12 @@ function SignUp() {
             </form>
             <p className="text-center mt-4 text-gray-600">
             Already have an account?{" "}
-            <a href="/login" className="text-blue-500 hover:underline">
+            <a onClick={()=> navigate("/login")} className="text-blue-500 hover:underline">
                 Login
             </a>
             </p>
         </div>
         </div>
-
-        {/* <div className='h-72 w-72 bg-white border-2'>
-        <form onSubmit={handleSubmit(signUp)}>
-            <label>Name:
-            <input className='border-2 border-black' type="text" placeholder='Enter Your Name' {...register("name", {
-                required: true
-            })} />
-            </label>
-            <label>Email:
-            <input className='border-2 border-black' type='email' placeholder='Enter Your Email' {...register("email", {
-                required: true
-            })} />
-            </label>
-            <label>Password:
-            <input className='border-2 border-black' type="password" placeholder='Enter Your Password' {...register("password", {
-                required: true
-            })} />
-            </label>
-            <button className='bg-blue-500 px-2 py-1 rounded-lg'>Sign Up</button>
-
-            {
-                error && <div className='text-red-400 text-xl'>error</div>
-            }
-        </form>
-        </div> */}
     </>
     );
 }
