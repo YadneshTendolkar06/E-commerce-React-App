@@ -48,7 +48,7 @@ function FeaturedProduct() {
             >
                 <img
                 src={items.thumbnail}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain"
                 />
                 <div className="p-4">
                 <h4 className="text-lg font-semibold text-gray-800">
