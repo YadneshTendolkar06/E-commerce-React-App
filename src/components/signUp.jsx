@@ -27,6 +27,7 @@ function SignUp() {
         }
     } catch (error) {
         console.log(error);
+        alert("Password must be between 8 and 265 characters long")
         setError(error);
     }
     };
