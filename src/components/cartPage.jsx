@@ -42,8 +42,8 @@ function CartPage() {
                     className="w-20 h-20 object-cover rounded-lg"
                     />
                     <div className="ml-4 flex-1">
-                    <h2 className="text-lg font-semibold">{item.title}</h2>
-                    <p className="text-gray-600 md:mx-0 mx-24">${item.price * item.count}</p>
+                    <h2 className="text-lg font-semibold md:text-left text-center">{item.title}</h2>
+                    <p className="text-gray-600 md:text-left text-center">${item.price * item.count}</p>
                     </div>
 
                     <div className="flex items-center gap-2">
