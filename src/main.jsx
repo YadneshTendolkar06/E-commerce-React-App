@@ -12,12 +12,22 @@ import {AuthLayout} from './components/index.jsx'
 import Cartpage from './pages/cartpage.jsx'
 import YourOrderPage from './pages/YourOrderPage.jsx'
 import InvoicePage from './pages/invoicePage.jsx'
+import LandingPage from './components/landingPage.jsx'
+import LearnMore from './components/LearnMore.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/",
+        element: <LandingPage />,
+      },
+      {
+        path: "/learnmore",
+        element: <LearnMore />,
+      },
       {
         path: "/signup",
         element: (<AuthLayout authentication={false}>
@@ -43,8 +53,8 @@ const router = createBrowserRouter([
       {
         path: "/cartpage",
         element: (
-          <AuthLayout authentication>
-            <Cartpage />
+          <AuthLayout authentication >
+              <Cartpage />
           </AuthLayout>
         )
       },

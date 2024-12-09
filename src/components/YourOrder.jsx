@@ -31,7 +31,7 @@ function YourOrders() {
             {OrderState.map((order,index) => (
             <div
                 key={index}
-                className="bg-white shadow-md rounded-lg p-4 flex items-center justify-between"
+                className="bg-white shadow-md rounded-lg p-4 flex flex-col md:flex-row items-center justify-between"
             >
                 <div className="flex items-center">
                 <img
@@ -44,7 +44,7 @@ function YourOrders() {
                     <p className="text-gray-600">Order Date: {date}-{month}-{year}</p>
                     <p className="text-gray-600">Payment: Cash On Delivery</p>
                     <p
-                    className={`mt-1 text-sm font-medium ${
+                    className={`mt-1 mb-5 text-sm font-medium ${
                         order.status === "Delivered"
                         ? "text-green-600"
                         : "text-blue-600"

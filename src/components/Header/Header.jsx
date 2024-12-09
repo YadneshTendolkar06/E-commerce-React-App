@@ -27,7 +27,7 @@ function Header() {
 
         <div className="container mx-auto flex justify-between items-center">
             <h1 className="px-4 text-2xl font-bold text-gray-800">
-            Shop<span className="text-blue-500">Now</span>
+            Shop<span className="text-blue-500">Easy</span>
             </h1>
 
             {/* Hamburger */}
@@ -41,6 +41,16 @@ function Header() {
                 authState ?
                 <LogoutBtn />
                 : null
+                }
+                {
+                    !authState &&
+                        navItems.map((item)=>
+                            item.active ?
+                            <div key={item.name}>
+                                <button onClick={()=> navigate(item.address)}>{item.name}</button>
+                            </div>
+                            : null
+                        )
                 }
                 </div>
 
